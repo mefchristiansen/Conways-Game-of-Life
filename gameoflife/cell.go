@@ -1,6 +1,9 @@
 package gameoflife
 
-import "github.com/hajimehoshi/ebiten"
+import (
+	"github.com/hajimehoshi/ebiten"
+	"github.com/hajimehoshi/ebiten/ebitenutil"
+)
 
 type Cell struct {
 	row   int
@@ -8,6 +11,12 @@ type Cell struct {
 	state bool
 }
 
-func (c *Cell) Draw(boardImage *ebiten.Image) {
-
+func (c *Cell) Draw(boardImage *ebiten.Image, scale int) {
+	ebitenutil.DrawRect(boardImage,
+		float64(c.row*scale),
+		float64(c.col*scale),
+		float64(scale),
+		float64(scale),
+		aliveColor,
+	)
 }

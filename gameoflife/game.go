@@ -6,7 +6,7 @@ import (
 
 const (
 	ScreenDimension int = 600
-	scale           int = 4
+	boardDimensions int = 100
 )
 
 type Game struct {
@@ -18,7 +18,10 @@ type Game struct {
 func NewGame() (*Game, error) {
 	g := &Game{}
 	var err error
-	g.board, err = NewBoard(ScreenDimension, scale)
+	g.board, err = NewBoard(
+		boardDimensions,
+		ScreenDimension/boardDimensions,
+	)
 	if err != nil {
 		return nil, err
 	}

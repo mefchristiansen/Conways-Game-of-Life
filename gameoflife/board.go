@@ -5,7 +5,6 @@ import (
 	"time"
 
 	"github.com/hajimehoshi/ebiten"
-	"github.com/hajimehoshi/ebiten/ebitenutil"
 )
 
 type Board struct {
@@ -17,8 +16,8 @@ type Board struct {
 // NewBoard generates a new Board with giving a size.
 func NewBoard(dimension int, scale int) (*Board, error) {
 	b := &Board{
-		dimension: dimension,
-		scale:     scale,
+		dimension: int(dimension),
+		scale:     int(scale),
 		cells:     initBoard(dimension),
 	}
 
@@ -32,8 +31,10 @@ func (b *Board) Update() error {
 func (b *Board) Draw(boardImage *ebiten.Image) {
 	for row := 0; row < b.dimension; row++ {
 		for col := 0; col < b.dimension; col++ {
-			if b.cells[row][col].state {
-				ebitenutil.DrawRect(boardImage, float64(row), float64(col), 1, 1, aliveColor)
+
+			c := b.cells[row][col]
+			if c.state {
+				c.Draw(boardImage, b.scale)
 			}
 		}
 	}
