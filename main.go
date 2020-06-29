@@ -14,7 +14,7 @@ func main() {
 	}
 	ebiten.SetMaxTPS(20)
 	ebiten.SetWindowSize(gameoflife.ScreenDimension, gameoflife.ScreenDimension)
-	ebiten.SetWindowTitle("Conway's Game of Life")
+	ebiten.SetWindowTitle("Conway's Game of Life (mefchristiansen)")
 	if err := ebiten.RunGame(game); err != nil {
 		log.Fatal(err)
 	}
