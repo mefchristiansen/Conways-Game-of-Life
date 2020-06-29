@@ -4,7 +4,7 @@
 
 <br>
 
-[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) written in Go
+[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) written in Go and visualized using [Ebiten](https://github.com/hajimehoshi/ebiten)
 
 <img src="cgol.gif" width="400" height="400" />
 
