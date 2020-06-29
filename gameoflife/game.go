@@ -49,7 +49,3 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	g.board.Draw(g.boardImage)
 	screen.DrawImage(g.boardImage, &ebiten.DrawImageOptions{})
 }
-
-func main() {
-	return
-}
