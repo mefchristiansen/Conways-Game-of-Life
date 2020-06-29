@@ -10,7 +10,7 @@
 
 I also enabled the user to be able to interact with the board by being able to set the state of a cell and its neighboring cells to alive when left clicking the cell. This allows for some really interesting results.
 
-<img src="cgol.gif" width="400" height="400" />
+<img src="cgol-interaction.gif" width="400" height="400" />
 
 ## Installation
 
